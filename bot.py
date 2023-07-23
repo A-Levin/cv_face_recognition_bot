@@ -37,7 +37,9 @@ async def handle_photo_or_document(message: types.Message):
     photo = message.photo[-1]
 
     # Скачиваем файл в директорию 'sources'
-    await photo.download('sources/' + photo.file_id + '.jpg')
+    await photo.download(
+        destination_file='sources/'+photo.file_id + '.jpg'
+    )
 
     # Отправляем пользователю сообщение об успешной загрузке
     await message.reply("Photo saved successfully")

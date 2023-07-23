@@ -10,4 +10,4 @@ docker rm cv_recognition_bot
 docker build -t my_bot_image .
 
 # Запустить новый контейнер cv_recognition_bot с обновленным образом
-docker run --restart=always -d -p 3000:3000 --name cv_recognition_bot my_bot_image
+docker run --restart=always -d -p 3000:3000 --name cv_recognition_bot
