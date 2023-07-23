@@ -13,7 +13,6 @@ def extract_faces_from_directory(input_directory, output_directory, scale_factor
     for filename in os.listdir(input_directory):
         if filename.lower().endswith(('.png', '.jpg', '.jpeg')):
             input_image_path = os.path.join(input_directory, filename)
-            output_image_path = os.path.join(output_directory, filename)
 
             # Загрузка изображения
             image = cv2.imread(input_image_path)
