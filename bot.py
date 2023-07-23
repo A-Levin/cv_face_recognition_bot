@@ -1,3 +1,4 @@
+#!/usr/bin/env python
 import logging
 import os
 from aiogram import Bot, Dispatcher, executor, types

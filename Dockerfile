@@ -6,11 +6,13 @@ WORKDIR /app
 
 # Копируем файлы бота в рабочую директорию
 COPY . /app
+
 # чтобы исправить баг с импортом зависимостей
-RUN apt-get update
+RUN apt update && apt libgl1 -y
+RUN ldconfig
 # Устанавливаем зависимости
-RUN pip install --no-cache-dir --upgrade pip && \
-    pip install --no-cache-dir -r requirements.txt
+RUN pip install --upgrade pip && \
+    pip install -r requirements.txt
 
 # Запускаем бота
 CMD ["python", "bot.py"]
