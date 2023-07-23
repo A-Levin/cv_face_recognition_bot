@@ -1,7 +1,7 @@
 import os
 import cv2
 
-def extract_faces_from_directory(input_directory, output_directory, scale_factor=1.3, min_neighbors=5, target_size=(100, 100)):
+def extract_faces_from_directory(input_directory, output_directory, scale_factor=1.3, min_neighbors=5, target_size=(200, 200)):
     # Загрузка классификатора Haar Cascade для обнаружения лиц
     face_cascade = cv2.CascadeClassifier(cv2.data.haarcascades + 'haarcascade_frontalface_default.xml')
 
@@ -26,7 +26,7 @@ def extract_faces_from_directory(input_directory, output_directory, scale_factor
             for i, (x, y, w, h) in enumerate(faces):
                 face = image[y:y+h, x:x+w]
 
-                # Ресайз лица до 100x100 пикселей
+                # Ресайз лица до 200x200 пикселей
                 if target_size:
                     face = cv2.resize(face, target_size)
 

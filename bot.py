@@ -19,7 +19,7 @@ async def send_welcome(message: types.Message):
     This handler will be called when user sends `/start` or `/help` command
     """
     await message.reply("Привет! Я бот который извлекает лица с фоток и возвращает их в"
-                        " разрешении 100х100.\n1. Просто отправь мне фотки. \n2. Вызови"
+                        " разрешении 200х200.\n1. Просто отправь мне фотки. \n2. Вызови"
                         " команду /extract_faces \n3. Получи извлеченные лица")
 
 @dp.message_handler(content_types=[types.ContentType.PHOTO])
