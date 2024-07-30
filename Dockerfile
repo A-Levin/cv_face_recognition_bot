@@ -8,7 +8,7 @@ WORKDIR /app
 COPY . /app
 
 # чтобы исправить баг с импортом зависимостей
-RUN apt update && apt libgl1 -y
+RUN apt update && apt install libgl1 -y
 RUN ldconfig
 # Устанавливаем зависимости
 RUN pip install --upgrade pip && \
