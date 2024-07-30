@@ -2,7 +2,6 @@
 import logging
 import os
 from aiogram import Bot, Dispatcher, executor, types
-
 from face_recognition import extract_faces_from_directory
 
 API_TOKEN = os.getenv("TELEGRAM_API_TOKEN", 'Insert your token here')
@@ -82,3 +81,4 @@ async def extract_faces(message: types.Message):
 
 if __name__ == '__main__':
     executor.start_polling(dp, skip_updates=True)
+
